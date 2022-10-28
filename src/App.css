@@ -1,38 +1,67 @@
-.App {
+html {
+  height: 100%;
+  background-image: url("./background.svg");
+  background-color: #030308;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, body > div {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+
+h1 {
+  font-size: 30px;
   color: white;
+  text-shadow: 2px 2px 5px #9360FA;
+  flex-basis: 25%;
 }
 
-.App-link {
-  color: #61dafb;
+.question {
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 5px #9360FA;
+  margin: 20px;
+  flex-basis: 15%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea {
+  color: white;
+  outline: none;
+  resize: none;
+
+  border-bottom: #9360FA solid 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 5px;
+  /* border: none; */
+  text-align: center;
+  background: transparent;
+
+  min-width: 70%;
+  font-size: x-large;
+  margin: 30px;
+  text-shadow: 2px 2px 5px #9360fa;
+}
+
+button {
+  margin: 30px;
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #9360fa;
 }
