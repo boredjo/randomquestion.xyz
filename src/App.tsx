@@ -1,7 +1,6 @@
 import './App.css';
 import React, { useState, useEffect, MouseEventHandler } from 'react';
 // import AnswerField from './AnswerField/AnswerField';
-import { Question, Answer } from '@prisma/client';
 import axios from 'axios';
 
 function App() {

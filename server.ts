@@ -16,12 +16,12 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, 'build')));
 
 routes.push(new QuestionRoutes(app));
-routes.push(new AnswerRoutes(app));
+//routes.push(new AnswerRoutes(app));
 
 // host react app
-app.get('*', (req: any,res: any) => {
-   res.sendFile(path.join(__dirname, 'build/index.html'));
-});
+// app.get('*', (req: any,res: any) => {
+//    res.sendFile(path.join(__dirname, 'build/index.html'));
+// });
 
 server.listen(port, () => {
     routes.forEach((route: CommonRoutesConfig) => {});
