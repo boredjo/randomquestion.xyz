@@ -5,6 +5,17 @@ import cors from 'cors';
 import {CommonRoutesConfig} from './routes/common.routes.config';
 import {QuestionRoutes} from './routes/question.routes.config';
 import {AnswerRoutes} from './routes/answer.routes.config';
+import * as dotenv from "dotenv";
+dotenv.config();
+
+console.log(process.env.PORT);
+console.log(process.env.DB_HOST);
+console.log(process.env.DB_PORT);
+console.log(process.env.DB_USER);
+console.log(process.env.DB_PASSWORD);
+console.log(process.env.DB_NAME);
+
+
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
@@ -21,14 +32,14 @@ const options: cors.CorsOptions = {
 
 app.use(cors(options));
 app.use(express.json())
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 routes.push(new QuestionRoutes(app));
 routes.push(new AnswerRoutes(app));
 
 // host react app
 app.get('*', (req: any,res: any) => {
-   res.sendFile(path.join(__dirname, '/frontend/build/index.html'));
+   res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
 server.listen(port, () => {

@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-height: 100%;
-  overflow-y: hidden;
+  height: 100vh;
+
 }
 
 a {
@@ -14,4 +14,21 @@ a {
 }
 a:visited {
   text-decoration: none;
+}
+
+code {
+
+  color: white;
+}
+
+pre {
+  background-color: #1b1722;
+  margin: 0 10%;
+  padding: 5pt;
+  padding-left: 5pt;
+  border: white 1px solid;
+  border-radius: 10pt;
+  text-align: left;
+  padding-left: 20pt;
+  box-shadow: 2px 2px 5px #9360FA;
 }
