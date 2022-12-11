@@ -11,9 +11,12 @@ body {
 
 a {
   text-decoration: none;
+  color: #9360fa;
 }
+
 a:visited {
   text-decoration: none;
+  color: #9360fa;
 }
 
 code {

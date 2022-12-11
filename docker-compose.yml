@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  random-question:
+    image: random-question:latest
+    container_name: randomQuestion
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=host"
+      - "DB_USER=randomQuestion"
+      - "DB_PASSWORD=password
+      - "DB_NAME=randomQuestion"
+    ports:
+      - 3000:3000
