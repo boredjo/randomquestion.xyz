@@ -31,7 +31,7 @@ $ ./install.sh
 
 Finally, you can run the server using node
 ```
-$ node server.js
+$ node dist/server.js
 ```
 ## Docker Image
 A docker image is also available, just use the `docker-compose` file from github
