@@ -7,7 +7,7 @@ export function Ask() {
     const [question, setQuestion] = useState<Question>({id: "",body: "",calls: 0});
 
     const submitHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        if(question.body != "") {
+        if(question.body !== "") {
                 axios.post('/api/question', question).then(res => {
                 console.log(res)
                 setQuestion({...question, body:""})

@@ -48,3 +48,10 @@ yarn-error.log*
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
 
+
+/dist/
+
+# js files
+/models/*.js
+/routes/*.js
+server.js

@@ -1,5 +1,5 @@
 import { OkPacket, RowDataPacket } from "mysql2";
-import {db} from "../sql/mysql";
+import {db} from "../mysql";
 
 
 export class Question {
@@ -20,12 +20,16 @@ export class Question {
         db.query(queryString, (err, result) => {
             const rows = <RowDataPacket[]> result;
             // console.log(rows)
-            
-            const question:Question = new Question(
-                rows[0].id,
-                rows[0].body,
-                rows[0].calls
-            )
+            var question:Question = new Question(
+                "", "there are no questions", 0
+            );
+            if(rows[0] != undefined){
+                question = new Question(
+                    rows[0].id,
+                    rows[0].body,
+                    rows[0].calls
+                )
+            }
             question.increaseCalls();
             callback(question);          
         });

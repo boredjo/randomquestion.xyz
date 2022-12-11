@@ -25,7 +25,7 @@ export function Home() {
     }
 
     const submitHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        if(answer.body != "") {
+        if(answer.body !== "") {
             answer.question = question
                 axios.post('/api/answer', answer).then(res => {
                 console.log(res)

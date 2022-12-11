@@ -1,5 +1,5 @@
 import { OkPacket, RowDataPacket } from "mysql2";
-import {db} from "../sql/mysql";
+import {db} from "../mysql";
 import { Question } from "./question";
 
 export class Answer {
