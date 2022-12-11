@@ -6,7 +6,7 @@ export class Question {
     private id: string;
     private body: string;
     private calls: number;
-//    private author: User;
+
 
     public save(callback: (questions: Question) => void) {
         const queryString = `INSERT INTO questions (body) VALUES (?)`;
@@ -19,7 +19,6 @@ export class Question {
         const queryString = `SELECT * FROM questions ORDER BY RAND() LIMIT 1`
         db.query(queryString, (err, result) => {
             const rows = <RowDataPacket[]> result;
-            // console.log(rows)
             var question:Question = new Question(
                 "", "there are no questions", 0
             );
@@ -70,7 +69,7 @@ export class Question {
     private increaseCalls(): void {
         const queryString = `UPDATE questions SET calls = calls + 1 WHERE id = ?`
         db.query(queryString, [this.id]);
-        // console.log(this.id);
+
     }
 
     private findByBody(callback: (questions: Question) => void): void {

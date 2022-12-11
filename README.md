@@ -8,6 +8,7 @@ You get a question and can answer it. Some question are deep, others are stupid.
 There source code can be found on [GitHub](https://github.com/boredjo/randomquestion.wtf/). To run your own instance, first edit the `.env` file
 ```
 # React application
+HOST="example.com"
 PORT="3000"
 
 # Database

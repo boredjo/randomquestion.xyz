@@ -42,11 +42,6 @@ export class QuestionRoutes extends CommonRoutesConfig {
                     res.status(500);
                 }
             })
-        
-        // this.app.route(`/api/question/:id/answers`)
-        //     .get(async (req: express.Request, res: express.Response) => {
-        //         res.status(200).send(answers);
-        //     })
     
         return this.app;
     }
