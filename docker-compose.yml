@@ -4,6 +4,7 @@ services:
     image: random-question:latest
     container_name: randomQuestion
     environment:
+      - "HOST=example.com"
       - "DB_PORT=3306"
       - "DB_HOST=host"
       - "DB_USER=randomQuestion"

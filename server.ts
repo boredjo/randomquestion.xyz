@@ -8,12 +8,12 @@ import {AnswerRoutes} from './routes/answer.routes.config';
 import * as dotenv from "dotenv";
 dotenv.config();
 
-console.log(process.env.PORT);
-console.log(process.env.DB_HOST);
-console.log(process.env.DB_PORT);
-console.log(process.env.DB_USER);
-console.log(process.env.DB_PASSWORD);
-console.log(process.env.DB_NAME);
+// console.log(process.env.PORT);
+// console.log(process.env.DB_HOST);
+// console.log(process.env.DB_PORT);
+// console.log(process.env.DB_USER);
+// console.log(process.env.DB_PASSWORD);
+// console.log(process.env.DB_NAME);
 
 
 
@@ -24,7 +24,7 @@ const routes: Array<CommonRoutesConfig> = [];
 const path = require('path');
 const runningMessage = `Server running at http://localhost:${port}`;
 
-const allowedOrigins = ['http://dev.jokaendler'];
+const allowedOrigins = [process.env.HOST || "randomquestion.wtf"];
 
 const options: cors.CorsOptions = {
   origin: allowedOrigins
