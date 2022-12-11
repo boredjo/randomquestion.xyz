@@ -1,5 +1,6 @@
 import express from 'express';
 import * as http from 'http';
+import cors from 'cors';
 
 import {CommonRoutesConfig} from './routes/common.routes.config';
 import {QuestionRoutes} from './routes/question.routes.config';
@@ -12,16 +13,23 @@ const routes: Array<CommonRoutesConfig> = [];
 const path = require('path');
 const runningMessage = `Server running at http://localhost:${port}`;
 
+const allowedOrigins = ['http://dev.jokaendler'];
+
+const options: cors.CorsOptions = {
+  origin: allowedOrigins
+};
+
+// app.use(cors(options));
 app.use(express.json())
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 routes.push(new QuestionRoutes(app));
-//routes.push(new AnswerRoutes(app));
+routes.push(new AnswerRoutes(app));
 
 // host react app
-// app.get('*', (req: any,res: any) => {
-//    res.sendFile(path.join(__dirname, 'build/index.html'));
-// });
+app.get('*', (req: any,res: any) => {
+   res.sendFile(path.join(__dirname, '/frontend/build/index.html'));
+});
 
 server.listen(port, () => {
     routes.forEach((route: CommonRoutesConfig) => {});

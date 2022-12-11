@@ -1,0 +1,104 @@
+.question-row{
+    display: flex;
+}
+.question {
+    margin: 20pt auto 0 5%;
+    min-width: 55%;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 5px #9360FA;
+}
+
+.graph{
+    width: 30vh;
+    height: 30vh;
+    border: green solid 1px;
+    margin: 0 10% 0 0;
+    width: 30vw;
+    align-self: flex-end;
+}
+
+.svg-item {
+    width: 100%;
+    font-size: 16px;
+    margin: 0 auto;
+    animation: donutfade 1s;
+}
+
+@keyframes example {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+.engagement-bar{
+    margin: 0 15% 40pt 10%;
+}
+
+.bar-background {
+    width: 100%;
+    height: 5pt;
+    border-radius: 5pt;
+    background-color: #130e24;
+}
+.bar {
+    width: 0%;
+    height: 5pt;
+}
+
+.bar-content {
+    width: 100%;
+    height: 5pt;
+    border-radius: 5pt;
+    background-color: white;
+    box-shadow: 2px 2px 5px #9360FA;
+    transform: translate(0pt,-5pt);
+}
+
+.bar-subtitle {
+    color: white;
+    text-shadow: 2px 2px 5px #9360FA;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: 0;
+}
+.pointer {
+    height: 12pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5pt;
+
+    text-align: left;
+    border: solid white 1px;
+    box-shadow: 2px 2px 5px #9360FA;
+}
+
+.answer-list{
+    border: white 1px solid;
+    border-radius: 5px;
+    color: white;
+    margin: 0 10% 0 5%;
+    box-shadow: 2px 2px 5px #9360FA;
+    background: rgba(102, 66, 175, 0.1);
+    transform: translate(0,-20pt);
+}
+.answer-list > div {
+    border-top: white 1px solid;
+    text-shadow: 2px 2px 5px #9360FA;
+    padding: 20px;
+    text-align: left;
+    
+}
+
+.answer-list > div:first-child {
+    border-top:none
+}
+
+.answer-list-header{
+    color: white;
+    text-shadow: 2px 2px 5px #9360FA;
+    padding: 10pt;
+    font-size: 24pt;
+    margin: 0 auto 0 5%;
+    transform: translate(0,-20pt);
+}
