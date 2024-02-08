@@ -42,7 +42,7 @@ export class Answer {
     }
 
     public static getFromQuestion(question: Question, callback: (answers: Answer[]) => void): void {
-        const queryString = `SELECT * FROM answers WHERE question = ? LIMIT 1`
+        const queryString = `SELECT * FROM answers WHERE question = ? LIMIT 10`
         db.query(queryString, [question.getId()],  (err, result) => {
             const rows = <RowDataPacket[]> result;
             const answers: Answer[] = [];

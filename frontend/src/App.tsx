@@ -14,7 +14,7 @@ function App() {
     return (
         <>
             <Link to="/about" id='about-icon'><MdInfo className='icon' /></Link>
-            <Link to="/"><h1>randomquestion.<a>wtf</a> </h1></Link>
+            <Link to="/"><h1>randomquestion.<a>xyz</a> </h1></Link>
 
             
             

@@ -1,11 +1,11 @@
-# randomquestion.wtf
+# randomquestion.xyz
 A simple website to start conversations
 
 ## What is this website?
 You get a question and can answer it. Some question are deep, others are stupid.
 
 ## Source code
-There source code can be found on [GitHub](https://github.com/boredjo/randomquestion.wtf/). To run your own instance, first edit the `.env` file
+There source code can be found on [GitHub](https://github.com/boredjo/randomquestion.xyz/). To run your own instance, first edit the `.env` file
 ```
 # React application
 HOST="example.com"
